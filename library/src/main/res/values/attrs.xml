@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="StatusLayout">
+        <!--空布局-->
+        <attr name="status_layout_empty" format="reference" />
+        <!--异常布局-->
+        <attr name="status_layout_error" format="reference" />
+        <!--加载中布局-->
+        <attr name="status_layout_loading" format="reference" />
+        <!--内容布局-->
+        <attr name="status_layout_data" format="reference" />
+        <!--默认显示的布局-->
+        <attr name="status_show" format="enum">
+            <enum name="empty" value="1" />
+            <enum name="error" value="2" />
+            <enum name="loading" value="3" />
+            <enum name="data" value="4" />
+        </attr>
+
+    </declare-styleable>
+
+</resources>

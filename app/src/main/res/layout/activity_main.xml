@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onClick1"
+            android:text="使用全局样式" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+
+            android:onClick="onClick4"
+            android:text="使用自定义样式" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onClick2"
+            android:text="xml布局方式1" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onClick3"
+            android:text="xml布局方式2" />
+
+    </LinearLayout>
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClick5"
+        android:text="相对布局" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="使用方法:\n
+1.设置默认样式，在Application里调用\n
+ StatusLayoutManager\n
+                .setEmptyLayoutId(R.layout.layout_status_empty)\n
+                .setErrorLayoutId(R.layout.layout_status_error)\n
+                .setLoadingLayoutId(R.layout.layout_status_loading);\n
+2.使用默认样式直接调用StatusLayoutManager.inject()，然后调用对应方法进行相关设置\n
+3.使用自定义样式StatusLayoutManager.newBuilder()\n
+    .setxxx()\n
+    .inject()\n进行相关方法设置\n
+4.直接在xml中设置"
+        android:textSize="14sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="通过方法inject(View)设置StatusLayout时，如果View是RelativeLayout时，为了防止布局错乱，会将View的id设置给StatusLayout，故在inject后，如果再findViewById(View的id)，获取到的View将会是StatusLayout。所以要在inject之前就获取View"
+        android:textColor="@color/colorAccent"
+        android:textSize="14sp" />
+
+</LinearLayout>

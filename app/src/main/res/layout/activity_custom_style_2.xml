@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".XmlStyleActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClick1"
+            android:text="空数据" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClick2"
+            android:text="加载失败" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClick3"
+            android:text="加载中" />
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClick4"
+            android:text="显示内容" />
+
+    </LinearLayout>
+
+
+    <com.lishang.library.statuslayout.StatusLayout
+        android:id="@+id/statusLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:status_layout_empty="@layout/layout_status_custom"
+        app:status_layout_error="@layout/layout_status_custom"
+        app:status_layout_loading="@layout/layout_status_loading"
+        app:status_show="loading">
+
+        <LinearLayout
+            android:id="@+id/ll_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_launcher_background"
+                android:src="@mipmap/ic_launcher" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="StatusLayout 本质上就是FrameLayout，所以可以直接在xml中添加内容布局,这种情况就不需要设置status_layout_data。还有就是不知道添加布局的id是什么，可以调用bindDataView与之绑定。如果没有调用，就不能自动隐藏，需要自己手动隐藏，或者给状态设置背景，将内容掩盖住，同时状态Statue.DATA失效。" />
+
+
+        </LinearLayout>
+
+
+    </com.lishang.library.statuslayout.StatusLayout>
+
+</LinearLayout>

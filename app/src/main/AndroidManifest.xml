@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.lishang.statelayout">
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".RelativeLayoutActivity"
+            android:label="相对布局"/>
+        <activity android:name=".CustomStyleActivity"
+            android:label="自定义样式"/>
+        <activity android:name=".XmlStyle2Activity"
+            android:label="xml中配置状态方式2"/>
+        <activity android:name=".XmlStyleActivity"
+            android:label="xml中配置状态方式1"/>
+        <activity android:name=".GlobalStyleActivity"
+            android:label="使用默认配置的状态"/>
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
