@@ -68,7 +68,7 @@ public class StatusLayout extends FrameLayout {
     }
 
     public StatusLayout(Context context, AttributeSet attrs) {
-        this(context, attrs, -1);
+        this(context, attrs, 0);
     }
 
     public StatusLayout(Context context, AttributeSet attrs, int defStyleAttr) {
